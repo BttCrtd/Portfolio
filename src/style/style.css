@@ -48,7 +48,6 @@ header nav a {
 
 .presentation {
     display: flex;
-    height: calc(100vh - 450px);
     flex-direction: column;
     justify-content: space-between;
     padding-left: 50px;
@@ -59,6 +58,22 @@ header nav a {
     margin: 0;
     margin-bottom: 70px;
     font-size: 100px;
+}
+
+.presentation #contact {
+    width: 349.4px;
+    height: 51px;
+}
+
+.presentation a {
+    color: #0B1014;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.presentation a:hover {
+    font-size: 22px;
+    color: black;
 }
 
 .presentation .information {

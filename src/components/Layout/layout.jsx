@@ -9,6 +9,7 @@ function Layout({children}) {
                 <p>Courtadon Baptiste</p>
                 <nav>
                     <Link to='/'>Index</Link>
+                    <Link to='/contact'>Contact</Link>
                 </nav>
             </header>
             <main>{children}</main>

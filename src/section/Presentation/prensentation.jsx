@@ -7,9 +7,9 @@ function Presentation(){
                     <p>Mis à jour :</p>
                     <p>Mars 2025</p>
                 </div>
-                <div>
+                <div id="contact">
                     <p>Contact :</p>
-                    <p>courtadon.baptiste@gmail.com</p>
+                    <a href="mailto:courtadon.baptiste@gmail.com">courtadon.baptiste@gmail.com</a>
                 </div>
                 <div>
                      <p>Localisation :</p>
