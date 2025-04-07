@@ -379,12 +379,6 @@ footer p {
 
 .banner-container {
   width: 100%;
-  background: -webkit-linear-gradient(to left, #999896, #ffffff);
-  background: linear-gradient(to left, #999896, #ffffff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #ffd700;
   text-align: center;
   padding: 10px 0;
   position: relative;
@@ -400,6 +394,11 @@ footer p {
   white-space: nowrap;
   padding-left: 0%;
   animation: slide 500s linear infinite;
+  background: -webkit-linear-gradient(to left, #999896, #ffffff);
+  background: linear-gradient(to left, #999896, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .presentation-perso {
