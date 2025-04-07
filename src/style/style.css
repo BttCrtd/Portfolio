@@ -1,19 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Londrina+Shadow&family=Londrina+Sketch&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
-    background-color: #54625A;
+    background-color: #434343;
     color: #0B1014;
     margin: 0px;
     font-family: "Montserrat", serif;
     min-width: 1025px;
 }
 
-
-body main {
-    width: 100%
-}
-
 header {
+    color: white;
     z-index: 1000;
     padding: 50px;
     display: flex;
@@ -38,15 +35,27 @@ header nav {
 }
 
 header nav a {
-    color: #0B1014;
+    color: white;
     font-size: 24px;
     font-weight: 500;
     text-decoration: none;
   }
 
-
+.content-with-background {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;     
+    z-index: 1;
+    position: relative;
+  }
+  
+.content-with-background > * {
+    position: relative;
+    z-index: 2; 
+  }
 
 .presentation {
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,20 +69,10 @@ header nav a {
     font-size: 100px;
 }
 
-.presentation #contact {
-    width: 349.4px;
-    height: 51px;
-}
-
 .presentation a {
-    color: #0B1014;
+    color: white;
     text-decoration: none;
     font-size: 20px;
-}
-
-.presentation a:hover {
-    font-size: 22px;
-    color: black;
 }
 
 .presentation .information {
@@ -97,13 +96,10 @@ header nav a {
     width: 100vw;
     padding: 0;
     height: auto;
-    background-color: #0B1014;
+    background: #000000;
+    background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #54625A;
-}
-
-.galerie .title {
-    font-size: 60px;
-    padding: 50px;
 }
 
 .grid-container {
@@ -140,7 +136,7 @@ header nav a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.80); 
+    background-color: rgba(0, 0, 0, 0.60); 
     opacity: 1; 
     transition: opacity 0.3s ease; 
 }
@@ -278,6 +274,131 @@ header nav a {
     align-items: flex-end;
   }*/
 
+  .contact-page{
+    width: 100%;
+    background: #000000;
+    background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 10px;
+  }
+
+  .contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info-email {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info-email input {
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: solid 1px white;
+  }
+
+  .contact form textarea {
+    height: 300px;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px transparent;
+  }
+
+  .contact form button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 1px transparent;
+    cursor: pointer;
+  }
+
+  .banner-container {
+    width: 100%;
+    background: linear-gradient(to left, #FFEFBA, #FFFFFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+    border: solid 1px black;
+    font-size: 40px;
+    font-family: "Londrina Shadow", sans-serif;
+    font-weight: 900;
+  }
+  
+  .banner-text {
+    display: inline-block;
+    white-space: nowrap; 
+    padding-left: 0%; 
+    animation: slide 500s linear infinite; 
+  }
+
+  .presentation-perso {
+    background-color: white;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+  }
+
+  .presentation-perso-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .presentation-perso-image img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+  }
+
+  .presetation-perso-text {
+    display:  flex;
+    flex-direction: column;
+    padding-right: 50px;
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0%); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+
+
+
   @media (max-width: 1025px) {
     body{
         min-width: 257px;
@@ -292,6 +413,10 @@ header nav a {
     
     header p {
         font-size: 15px;
+    }
+
+    header nav {
+        gap: 5px;
     }
     
     header nav a {
@@ -310,6 +435,10 @@ header nav a {
         margin-bottom: 70px;
         margin-top: 40px;
         font-size: 35px;
+    }
+
+    .presentation a {
+        font-size: 14px;
     }
     
     .presentation .information {
@@ -431,4 +560,48 @@ header nav a {
        .projet .picture .button button {
         font-size: 25px;
       }
+
+    .contact{
+    padding: 10px;
+    width: 100%;
+    }
+
+    .contact form {
+    width: 90%;
+    }
+
+    .info-email {
+    width: 100%;
+    }
+
+    .contact form textarea {
+    height: 300px;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px transparent;
+    }
+
+    .contact form button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 1px transparent;
+    cursor: pointer;
+    }
+    
+    .presentation-perso {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    .presetation-perso-text {
+    align-items: center;
+    padding-right: 20px;
+    text-align: center;
+    }
   }

@@ -1,4 +1,6 @@
-function Presentation(){
+import { Link } from "react-router-dom";
+
+function PresentationPorfolio(){
     return (
         <section className="presentation">
             <h1>Développeur Web</h1>
@@ -7,16 +9,17 @@ function Presentation(){
                     <p>Mis à jour :</p>
                     <p>Mars 2025</p>
                 </div>
-                <div id="contact">
+                <div>
                     <p>Contact :</p>
-                    <a href="mailto:courtadon.baptiste@gmail.com">courtadon.baptiste@gmail.com</a>
+                    <Link to='/contact'>courtadon.baptiste@gmail.com</Link>
                 </div>
                 <div>
-                     <p>Localisation :</p>
-                    <p>France, Clermont-Ferrand</p>                    </div>
+                    <p>Localisation :</p>
+                    <p>France, Clermont-Ferrand</p>                    
                 </div>
+            </div>
         </section>
     )
 }
 
-export default Presentation
+export default PresentationPorfolio

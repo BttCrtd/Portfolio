@@ -1,22 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import PresentationPorfolio from "../../section/PresentationPortfolio/presentationPortfolio";
+import imgFond from "../../assets/imgFond2.webp";
 
-// eslint-disable-next-line react-refresh/only-export-components
-function Layout({children}) {
-    //const activeLink = useLocation()
-    return(
+function Layout({ children }) {
+    const location = useLocation();
+    const isProjetPage = location.pathname === "/projet"; 
+
+    return (
         <div>
-            <header>
-                <p>Courtadon Baptiste</p>
-                <nav>
-                    <Link to='/'>Index</Link>
-                    <Link to='/contact'>Contact</Link>
-                </nav>
-            </header>
-            <main>{children}</main>
-            <footer>
-            </footer>
+            <div 
+                className="content-with-background" 
+                style={{ backgroundImage: `url(${imgFond})` }}
+            >
+                <header>
+                    <p>Courtadon Baptiste</p>
+                    <nav>
+                        <Link to='/'>Index</Link>
+                        <Link to='/contact'>Contact</Link>
+                    </nav>
+                </header>
+                {!isProjetPage && <PresentationPorfolio />} 
+            </div>
+            <main>
+                {children}
+            </main>
         </div>
-    )
+    );
 }
 
-export default Layout
+export default Layout;

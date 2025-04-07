@@ -18,9 +18,6 @@ const mvgGallery = Object.values(mvgImages).map((module) => module.default);
 function Galerie () {
     return (
         <section className="galerie">
-            <div className="title">
-                <p>Sélection de différents projets réalisés</p>
-            </div>
             <div className="grid-container">
                 <Link to="/projet" state={{ imagesGallery: bookieGallery, title: "Bookie", link: "https://github.com/BttCrtd/Projet-2.git", number: "1", info: ["HTML", "CSS"] }} className="grid-item">
                     <img src={imgBookie} />
