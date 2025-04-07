@@ -336,10 +336,12 @@ header nav a {
 
   .banner-container {
     width: 100%;
+    background: -webkit-linear-gradient(to left, #FFEFBA, #FFFFFF);
     background: linear-gradient(to left, #FFEFBA, #FFFFFF);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: #FFD700; 
     text-align: center;
     padding: 10px 0;
     position: relative;
