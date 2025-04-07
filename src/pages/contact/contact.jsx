@@ -34,45 +34,47 @@ function Contact() {
 
   return (
     <div>
-      <BannerText message={"ME CONTACTER / "}/>
+      <BannerText message={"ME CONTACTER / "} />
       <section className="contact-page">
-          <div className="contact">
-              <form onSubmit={handleSubmit}>
-                  <div className="info-email">
-                      <input
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                      />
-                      <input
-                          type="text"
-                          name="subject"
-                          placeholder="Objet"
-                          value={formData.subject}
-                          onChange={handleChange}
-                          required
-                      />
-                  </div>
-                  <textarea
-                      name="message"
-                      placeholder="Votre message"
-                      rows={4}
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                  />
-                  <button type="submit">
-                      Envoyer
-                  </button>
-              </form>
-              {status && <p>{status}</p>}
-          </div>
+        <div className="contact">
+          <form onSubmit={handleSubmit}>
+            <h2>
+              Vous avez un projet en tête ? Faisons-le ensemble ! <br></br>{" "}
+              Contactez-moi pour donner vie à vos idées !
+            </h2>
+            <div className="info-email">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Objet"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <textarea
+              name="message"
+              placeholder="Votre message"
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit">Envoyer</button>
+          </form>
+          {status && <p>{status}</p>}
+        </div>
       </section>
     </div>
   );
 }
 
-export default Contact
+export default Contact;

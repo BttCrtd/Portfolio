@@ -1,26 +1,26 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
-} from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
-function SlideShow({ pictures, title}) {
-  const [currentIndex, setCurrentIndex] = useState(0)
+function SlideShow({ pictures, title }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const nexPicture = () => {
     setCurrentIndex((nexIndex) => {
       return nexIndex === pictures.length - 1
         ? nexIndex - pictures.length + 1
-        : nexIndex + 1
-    })
-  }
+        : nexIndex + 1;
+    });
+  };
 
   const prevPicture = () => {
     setCurrentIndex((prevIndex) => {
-      return prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
-    })
-  }
+      return prevIndex === 0 ? pictures.length - 1 : prevIndex - 1;
+    });
+  };
 
   return (
     <div className="picture">
@@ -46,7 +46,7 @@ function SlideShow({ pictures, title}) {
         </>
       ) : null}
     </div>
-  )
+  );
 }
 
-export default SlideShow
+export default SlideShow;
