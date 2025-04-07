@@ -1,10 +1,10 @@
 import { useLocation } from "react-router-dom";
 import SlideShow from "../../components/SlideShow/SlideShow";
-import Layout from "../../components/Layout/layout";
+import Collapse from "../../components/Collapse/collapse";
 
 function Projet() {
     const location = useLocation();
-    const {title, link, number, info, imagesGallery} = location.state || {};
+    const {title, link, number, info, imagesGallery, presentationText} = location.state || {};
     return (
             <section className="projet">
                 <div className="title">
@@ -25,6 +25,9 @@ function Projet() {
                         </div>
                     </div>
                     <SlideShow pictures={imagesGallery} title={title} />
+                </div>
+                <div className="collapse">
+                    <Collapse name={'Présentation du projet'} text={presentationText}/>
                 </div>
             </section>
     )
