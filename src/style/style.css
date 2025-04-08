@@ -367,6 +367,7 @@ footer p {
   padding: 10px;
   border-radius: 10px;
   border: solid 1px transparent;
+  font-size: 14px;
 }
 
 .contact form button {
@@ -387,6 +388,7 @@ footer p {
   font-size: 40px;
   font-family: "Londrina Shadow", sans-serif;
   font-weight: 900;
+  background-color: black;
 }
 
 .banner-text {

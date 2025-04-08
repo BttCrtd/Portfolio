@@ -1,6 +1,5 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import BannerText from "../../components/BannerText/BannerText";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -34,7 +33,6 @@ function Contact() {
 
   return (
     <div>
-      <BannerText message={"ME CONTACTER / "} />
       <section className="contact-page">
         <div className="contact">
           <form onSubmit={handleSubmit}>

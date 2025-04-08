@@ -58,6 +58,20 @@ Enfin, à l’issue de ce projet, j’ai rédigé un rapport détaillé présent
 
 `;
 
+const KasaDescription = `
+Dans ce projet, j’ai développé le front-end d’une application en utilisant React, React Router et l’outil de build Vite, dans le but de créer une interface moderne, fluide et responsive.
+L’objectif était de construire une expérience utilisateur efficace en se basant sur des maquettes précises et en affichant dynamiquement des données simulées issues d’un fichier JSON. J’ai mis en place une architecture modulaire en composants réutilisables, facilitant la maintenance et l’évolution du code.
+Grâce à React Router, j’ai géré la navigation entre les différentes pages de manière fluide, sans rechargement complet du site, tout en respectant les bonnes pratiques du Single Page Application (SPA).
+Ce projet m’a permis de renforcer mes compétences en développement front-end moderne, en structuration d’applications React, et en gestion du routage avec React Router, tout en adoptant un environnement de développement rapide et performant grâce à Vite.
+`;
+
+const MvgDescription = `
+Dans ce projet, j’ai développé le back-end d’un site de notation de livres en utilisant Node.js, Express et MongoDB. Mon objectif principal était de construire un serveur sécurisé et performant, capable de gérer les interactions entre les utilisateurs et la base de données.
+J’ai mis en place une architecture MVC (Modèle-Vue-Contrôleur) pour structurer l’application de manière claire et scalable. À l’aide de Mongoose, j’ai modélisé les données et développé les différentes opérations CRUD pour permettre l’ajout, la modification, la suppression et la consultation des différentes annonces.
+Le projet intègre également : un système d’authentification sécurisé avec gestion des tokens pour protéger l’accès aux fonctionnalités du site ; la gestion de fichiers pour le téléchargement et l’optimisation des images des livres.
+Ce projet m’a permis de consolider mes compétences en développement back-end, en gestion de base de données, en sécurité des API, et en structuration d’application serveur.
+`;
+
 function Galerie() {
   return (
     <section
@@ -108,7 +122,13 @@ function Galerie() {
             title: "Nina Carducci",
             link: "https://github.com/BttCrtd/Projet-4.git",
             number: "3",
-            info: ["SEO", "Débugage", "Chrome DevTools"],
+            info: [
+              "SEO",
+              "Débugage",
+              "Chrome DevTools",
+              "Lighthouse",
+              "Schema.org",
+            ],
             presentationText: NinaDescription,
           }}
           className="grid-item"
@@ -123,7 +143,15 @@ function Galerie() {
             title: "Kasa",
             link: "https://github.com/BttCrtd/Projet5.git",
             number: "4",
-            info: ["HTML", "Sass", "JavaScript", "React"],
+            info: [
+              "React",
+              "React Router",
+              "Vite",
+              "HTML",
+              "Sass",
+              "JavaScript",
+            ],
+            presentationText: KasaDescription,
           }}
           className="grid-item"
         >
@@ -140,7 +168,15 @@ function Galerie() {
             title: "Mon Vieux Grimoire",
             link: "https://github.com/BttCrtd/Projet6.git",
             number: "5",
-            info: ["Node.js", "Express", "API REST", "MongoDB"],
+            info: [
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "Mongoose",
+              "API REST",
+              "JavaScript",
+            ],
+            presentationText: MvgDescription,
           }}
           className="grid-item"
         >

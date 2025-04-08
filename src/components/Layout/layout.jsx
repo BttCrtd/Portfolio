@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import PresentationPorfolio from "../../section/PresentationPortfolio/presentationPortfolio";
-import imgFond from "../../assets/imgFond2.webp";
+import imgFond from "../../assets/imgFond.webp";
 import { useEffect, useState } from "react";
 
 function Layout({ children }) {
@@ -40,7 +40,9 @@ function Layout({ children }) {
     <div>
       <div
         className="content-with-background"
-        style={{ backgroundImage: `url(${imgFond})` }}
+        style={{
+          backgroundImage: `url(${imgFond})`,
+        }}
       >
         <header>
           <p>Courtadon Baptiste</p>
