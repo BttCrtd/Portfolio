@@ -103,13 +103,13 @@ function Layout({ children }) {
       <main>{children}</main>
 
       <footer>
-        <div className="info">
-          <div>
-            <p>Contact :</p>
-            <Link to="/contact">courtadon.baptiste@gmail.com</Link>
-            <p>Localisation :</p>
-            <p>France, Clermont-Ferrand</p>
-          </div>
+        <div>
+          <p>Contact :</p>
+          <Link to="/contact">courtadon.baptiste@gmail.com</Link>
+        </div>
+        <div>
+          <p>Localisation :</p>
+          <p>France, Clermont-Ferrand</p>
         </div>
         <div className="ARR">
           <p>© 2025 Courtadon Baptiste.</p>
