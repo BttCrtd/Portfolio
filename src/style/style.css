@@ -523,6 +523,67 @@ footer p {
   padding: 20px;
 }
 
+.competences {
+  background-color: white;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.competences div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+}
+
+.frontend {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.backend {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.others {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.competences div h2 {
+  color: #8b8787;
+  position: absolute;
+  top: 0.8rem;
+  background: white;
+  padding: 0 0.5rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.list-contener {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  width: 80%;
+  height: auto;
+}
+
+.competences div ul {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.competences div ul li {
+  margin-top: 15px;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0%);
@@ -758,5 +819,34 @@ footer p {
 
   .element p {
     font-size: 12px;
+  }
+
+  .competences {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .competences div {
+    padding: 20px;
+  }
+
+  .frontend {
+    margin-top: 1rem;
+  }
+
+  .backend {
+    margin-top: 0rem;
+  }
+
+  .others {
+    margin-top: 0rem;
+  }
+
+  .competences div h2 {
+    top: -0.9rem;
+  }
+
+  .competences div ul {
+    font-size: 14px;
   }
 }
