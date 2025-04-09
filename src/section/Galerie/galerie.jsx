@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import imgFond from "../../assets/GalerieFond.webp";
 import imgBookie from "../../assets/Cover/Booki-couverture.jpg";
 const bookieImages = import.meta.glob("../../assets/Bookie/*.png", {
   eager: true,
@@ -74,14 +73,7 @@ Ce projet m’a permis de consolider mes compétences en développement back-end
 
 function Galerie() {
   return (
-    <section
-      className="galerie"
-      style={{
-        backgroundImage: `url(${imgFond})`,
-        backgroundSize: "cover",
-        width: "100%",
-      }}
-    >
+    <section className="galerie">
       <div className="grid-container">
         <Link
           to="/projet"
@@ -98,7 +90,6 @@ function Galerie() {
           <img src={imgBookie} />
           <div className="filter"></div>
         </Link>
-        <div className="grid-item without"></div>
         <Link
           to="/projet"
           state={{
@@ -157,9 +148,6 @@ function Galerie() {
           <img src={imgKasa} />
           <div className="filter"></div>
         </Link>
-        <div className="grid-item without"></div>
-        <div className="grid-item without"></div>
-        <div className="grid-item without"></div>
         <Link
           to="/projet"
           state={{

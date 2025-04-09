@@ -4,7 +4,7 @@ import "../../style/style.css";
 import { useState } from "react";
 
 function Collapse({ name, text }) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);

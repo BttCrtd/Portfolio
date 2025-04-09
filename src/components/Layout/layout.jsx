@@ -11,6 +11,7 @@ function Layout({ children }) {
 
   const [isRedirectToProjects, setIsRedirectToProjects] = useState(false);
   const [isRedirectToCompetences, setIsRedirectToCompetences] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToProjects = () => {
     const element = document.getElementById("mesProjets");
@@ -21,6 +22,7 @@ function Layout({ children }) {
 
   const handleProjectClick = () => {
     setIsRedirectToProjects(true);
+    setIsMenuOpen(false);
     if (!isIndexPage) {
       navigate("/");
     } else {
@@ -46,6 +48,7 @@ function Layout({ children }) {
 
   const handleCompetencesClick = () => {
     setIsRedirectToCompetences(true);
+    setIsMenuOpen(false);
     if (!isIndexPage) {
       navigate("/");
     } else {
@@ -71,19 +74,44 @@ function Layout({ children }) {
         }}
       >
         <header>
-          <p>Courtadon Baptiste</p>
-          <nav>
-            <Link to="/">Index</Link>
+          <p className={isMenuOpen ? "open" : ""}>Courtadon Baptiste</p>
+
+          <div
+            className={`hamburger ${isMenuOpen ? "open" : ""}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <nav className={isMenuOpen ? "open" : ""}>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Accueil
+            </Link>
             <a onClick={handleCompetencesClick}>Mes Compétences</a>
             <a onClick={handleProjectClick}>Mes Projets</a>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </Link>
           </nav>
         </header>
+
         {!isProjetPage && <PresentationPorfolio />}
       </div>
+
       <main>{children}</main>
+
       <footer>
-        <div>
+        <div className="info">
+          <div>
+            <p>Contact :</p>
+            <Link to="/contact">courtadon.baptiste@gmail.com</Link>
+            <p>Localisation :</p>
+            <p>France, Clermont-Ferrand</p>
+          </div>
+        </div>
+        <div className="ARR">
           <p>© 2025 Courtadon Baptiste.</p>
           <p>All rights reserved</p>
         </div>
