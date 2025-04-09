@@ -1,6 +1,6 @@
-function BannerText({ message }) {
+function BannerText({ message, id }) {
   return (
-    <div className="banner-container">
+    <div className="banner-container" id={id}>
       <div className="banner-text">{`${message}`.repeat(60)}</div>
     </div>
   );

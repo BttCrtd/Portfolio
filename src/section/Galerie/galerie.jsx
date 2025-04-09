@@ -76,7 +76,6 @@ function Galerie() {
   return (
     <section
       className="galerie"
-      id="mesProjets"
       style={{
         backgroundImage: `url(${imgFond})`,
         backgroundSize: "cover",

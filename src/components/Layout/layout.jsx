@@ -10,6 +10,7 @@ function Layout({ children }) {
   const isProjetPage = location.pathname === "/projet";
 
   const [isRedirectToProjects, setIsRedirectToProjects] = useState(false);
+  const [isRedirectToCompetences, setIsRedirectToCompetences] = useState(false);
 
   const scrollToProjects = () => {
     const element = document.getElementById("mesProjets");
@@ -36,6 +37,31 @@ function Layout({ children }) {
     }
   }, [isRedirectToProjects]);
 
+  const scrollToCompetences = () => {
+    const element = document.getElementById("mesCompetences");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleCompetencesClick = () => {
+    setIsRedirectToCompetences(true);
+    if (!isIndexPage) {
+      navigate("/");
+    } else {
+      scrollToCompetences();
+    }
+  };
+
+  useEffect(() => {
+    if (isRedirectToCompetences) {
+      setIsRedirectToCompetences(false);
+      setTimeout(() => {
+        scrollToCompetences();
+      }, 250);
+    }
+  }, [isRedirectToCompetences]);
+
   return (
     <div>
       <div
@@ -48,6 +74,7 @@ function Layout({ children }) {
           <p>Courtadon Baptiste</p>
           <nav>
             <Link to="/">Index</Link>
+            <a onClick={handleCompetencesClick}>Mes Compétences</a>
             <a onClick={handleProjectClick}>Mes Projets</a>
             <Link to="/contact">Contact</Link>
           </nav>

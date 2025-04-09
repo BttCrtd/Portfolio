@@ -8,9 +8,9 @@ function Index() {
   return (
     <div>
       <Presentation />
-      <BannerText message={"MES COMPETENCES / "} />
+      <BannerText message={"MES COMPETENCES / "} id={"mesCompetences"} />
       <Competence />
-      <BannerText message={"MES PROJETS / "} />
+      <BannerText message={"MES PROJETS / "} id={"mesProjets"} />
       <Galerie />
     </div>
   );

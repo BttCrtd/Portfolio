@@ -850,3 +850,22 @@ footer p {
     font-size: 14px;
   }
 }
+
+@media (max-width: 491px) {
+  header {
+    flex-direction: column;
+  }
+
+  header p {
+    margin-bottom: 20px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header nav a {
+    margin-left: 0px;
+  }
+}
