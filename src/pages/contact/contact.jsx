@@ -1,5 +1,5 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -17,16 +17,20 @@ function Contact() {
     e.preventDefault();
     emailjs
       .send(
-        // eslint-disable-next-line no-undef
-        process.env.REACT_APP_EMAILJS_SERVICE_ID, // Remplace par ton service ID
-        // eslint-disable-next-line no-undef
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Remplace par ton template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formData,
-        // eslint-disable-next-line no-undef
-        process.env.REACT_APP_EMAILJS_USER_ID // Remplace par ton user ID
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
-        () => setStatus("Email envoyé avec succès !"),
+        () => {
+          setStatus("Email envoyé avec succès !");
+          setFormData({
+            email: "",
+            subject: "",
+            message: "",
+          });
+        },
         () => setStatus("Erreur lors de l'envoi de l'email.")
       );
   };
