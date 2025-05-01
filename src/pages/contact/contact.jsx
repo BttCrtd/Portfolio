@@ -46,6 +46,14 @@ function Contact() {
             </h2>
             <div className="info-email">
               <input
+                type="name"
+                name="name"
+                placeholder="Nom"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
                 type="email"
                 name="email"
                 placeholder="Email"
