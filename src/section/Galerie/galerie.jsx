@@ -87,7 +87,10 @@ function Galerie() {
           }}
           className="grid-item"
         >
-          <img src={imgBookie} />
+          <img
+            src={imgBookie}
+            alt="Image de couverture du premier projet: Booki"
+          />
           <div className="filter"></div>
         </Link>
         <Link
@@ -102,7 +105,10 @@ function Galerie() {
           }}
           className="grid-item"
         >
-          <img src={imgSophie} />
+          <img
+            src={imgSophie}
+            alt="Image de couverture du deuxième projet: Sophie Bluel"
+          />
           <div className="filter"></div>
         </Link>
         <Link
@@ -123,7 +129,10 @@ function Galerie() {
           }}
           className="grid-item"
         >
-          <img src={imgNina} />
+          <img
+            src={imgNina}
+            alt="Image de couverture du troisième projet: Nina Carducci"
+          />
           <div className="filter"></div>
         </Link>
         <Link
@@ -145,7 +154,10 @@ function Galerie() {
           }}
           className="grid-item"
         >
-          <img src={imgKasa} />
+          <img
+            src={imgKasa}
+            alt="Image de couverture du quatrième projet: Kasa"
+          />
           <div className="filter"></div>
         </Link>
         <Link
@@ -167,7 +179,10 @@ function Galerie() {
           }}
           className="grid-item"
         >
-          <img src={imgMVG} />
+          <img
+            src={imgMVG}
+            alt="Image de couverture du cinquième projet: Mon Vieux Grimoire"
+          />
           <div className="filter"></div>
         </Link>
       </div>
