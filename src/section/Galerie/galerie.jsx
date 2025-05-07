@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { projectsData } from "../../data/projetsData";
+import photoPlus from "../../assets/Cover/couverture_plus.jpg";
 
 function Galerie() {
+  const isOdd = projectsData.length % 2 !== 0;
+
   return (
     <section className="galerie">
       <div className="grid-container">
@@ -12,10 +15,12 @@ function Galerie() {
             state={{
               imagesGallery: project.gallery,
               title: project.title,
+              type: project.type,
               link: project.link,
               number: project.number,
               info: project.info,
-              presentationText: project.description,
+              presentationText: project.presentation,
+              descriptionText: project.description,
             }}
             className="grid-item"
           >
@@ -26,6 +31,17 @@ function Galerie() {
             <div className="filter"></div>
           </Link>
         ))}
+        {isOdd && (
+          <Link to="/contact" className="grid-item-plus">
+            <img
+              src={photoPlus}
+              alt="Et si votre projet devenait notre projet ?"
+            />
+            <div className="filter-plus">
+              <p>Et si ...</p>
+            </div>
+          </Link>
+        )}
       </div>
     </section>
   );

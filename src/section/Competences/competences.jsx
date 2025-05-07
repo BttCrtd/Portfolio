@@ -7,11 +7,11 @@ function Competence() {
           <h3>Front-end</h3>
           <div className="list-contener">
             <ul>
+              <li>React</li>
+              <li>JavaScript</li>
               <li>HTML5</li>
               <li>CSS3</li>
               <li>SASS</li>
-              <li>JavaScript</li>
-              <li>React</li>
             </ul>
           </div>
         </div>
@@ -22,7 +22,7 @@ function Competence() {
               <li>Node.js</li>
               <li>Express</li>
               <li>MongoDB</li>
-              <li>Pyton</li>
+              <li>Python</li>
               <li>API REST</li>
             </ul>
           </div>

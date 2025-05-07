@@ -23,28 +23,33 @@ function SlideShow({ pictures, title }) {
   };
 
   return (
-    <div className="picture">
-      <img
-        src={pictures[currentIndex]}
-        alt={`Photo ${currentIndex + 1} sur ${pictures.length} de ${title}`}
-      />
-      {pictures.length !== 1 ? (
-        <>
-          <div className="button">
-            <button onClick={prevPicture}>
-              <FontAwesomeIcon icon={faChevronLeft} />
-            </button>
-            <button onClick={nexPicture}>
-              <FontAwesomeIcon icon={faChevronRight} />
-            </button>
-          </div>
-          <div className="pictureNumber">
-            <p>
-              {currentIndex + 1}/{pictures.length}
-            </p>
-          </div>
-        </>
-      ) : null}
+    <div className="carousel">
+      <div className="picture">
+        <img
+          src={pictures[currentIndex]}
+          alt={`Photo ${currentIndex + 1} sur ${pictures.length} de ${title}`}
+        />
+        {pictures.length !== 1 ? (
+          <>
+            <div className="button">
+              <button onClick={prevPicture}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </button>
+              <button onClick={nexPicture}>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+            </div>
+          </>
+        ) : null}
+      </div>
+      <div className="pictureBubbles">
+        {pictures.map((_, index) => (
+          <span
+            key={index}
+            className={`bubble ${index === currentIndex ? "active" : ""}`}
+          ></span>
+        ))}
+      </div>
     </div>
   );
 }

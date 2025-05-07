@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import BannerText from "../../components/BannerText/BannerText";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -37,6 +38,7 @@ function Contact() {
 
   return (
     <div>
+      <BannerText message={"CONTACTEZ MOI / "} id={"contact"} />
       <section className="contact-page">
         <div className="contact">
           <form onSubmit={handleSubmit}>
@@ -80,7 +82,7 @@ function Contact() {
             />
             <button type="submit">Envoyer</button>
           </form>
-          {status && <p>{status}</p>}
+          <div className="status">{status && <p>{status}</p>}</div>
         </div>
       </section>
     </div>
