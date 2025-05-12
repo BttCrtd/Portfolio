@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Londrina+Shadow&family=Londrina+Sketch&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
+/************************************************************************************/
+/***************************** Générale *********************************************/
+
 body {
   background-color: #434343;
   color: #0b1014;
@@ -12,6 +15,25 @@ body {
 p {
   font-size: 20px;
   font-family: "Montserrat", serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+/************************************************************************************/
+/***************************** Header ***********************************************/
+.content-with-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
+}
+
+.content-with-background > * {
+  position: relative;
+  z-index: 2;
 }
 
 header {
@@ -42,7 +64,7 @@ header nav {
 
 header nav a {
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
@@ -51,6 +73,51 @@ header nav a {
 header nav a:hover {
   cursor: pointer;
 }
+
+.presentation {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  gap: 10px;
+}
+
+.presentation p {
+  margin-top: 0;
+  margin-bottom: 44px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.presentation h1 {
+  margin: 0;
+  font-size: 64px;
+}
+
+.presentation a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.presentation .information {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.presentation .information div {
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation .information div p {
+  margin: 0;
+  font-size: 20px;
+}
+
+/********** Nav hamburger **********/
 
 .hamburger {
   display: none;
@@ -68,6 +135,9 @@ header nav a:hover {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
+
+/************************************************************************************/
+/***************************** Footer **********************************************/
 
 footer {
   width: 100%;
@@ -100,7 +170,7 @@ footer div {
 footer div a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 0px;
 }
 
@@ -108,58 +178,11 @@ footer p {
   color: white;
   margin: 0;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 22px;
 }
 
-.content-with-background {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-  position: relative;
-}
-
-.content-with-background > * {
-  position: relative;
-  z-index: 2;
-}
-
-.presentation {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-left: 50px;
-  padding-bottom: 50px;
-}
-
-.presentation h1 {
-  margin: 0;
-  margin-bottom: 70px;
-  font-size: 64px;
-}
-
-.presentation a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.presentation .information {
-  display: flex;
-  flex-direction: row;
-  gap: 60px;
-}
-
-.presentation .information div {
-  display: flex;
-  flex-direction: column;
-}
-
-.presentation .information div p {
-  margin: 0;
-  font-size: 20px;
-}
+/************************************************************************************/
+/***************************** Section galerie **************************************/
 
 .galerie {
   width: 100%;
@@ -263,6 +286,9 @@ footer p {
   opacity: 0;
 }
 
+/************************************************************************************/
+/***************************** Page projet **************************************/
+
 .projet {
   color: white;
   padding: 50px;
@@ -307,9 +333,13 @@ footer p {
   gap: 60px;
 }
 
+.projet .info-and-img .presentationStrong {
+  font-size: 34px;
+  font-weight: bold;
+}
+
 .projet .info-and-img .presentation-txt {
-  font-size: 24px;
-  width: 50%;
+  font-size: 22px;
 }
 
 .projet .info {
@@ -345,15 +375,16 @@ footer p {
 
 .projet a {
   display: inline-block;
-  width: 150px;
+  width: 180px;
   padding: 12px 20px;
-  background-color: white;
+  background-color: #1e40af;
   border-radius: 25px;
-  color: black;
+  color: white;
   text-decoration: none;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
-  border: 2px solid white;
+  border: 2px solid #1e40af;
 }
 
 .projet .picture {
@@ -419,179 +450,7 @@ footer p {
   background-color: #ccc;
 }
 
-.contact-page {
-  width: 100%;
-  background: #000000;
-  background: -webkit-linear-gradient(to bottom, #434343, #000000);
-  background: linear-gradient(to bottom, #434343, #000000);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25px;
-  padding: 30px;
-  margin: 10px;
-}
-
-.contact form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.contact form h2 {
-  margin-top: 30px;
-  margin-bottom: 50px;
-  font-size: 38px;
-  text-align: center;
-}
-
-.info-email {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.info-email input {
-  height: 30px;
-  padding-left: 10px;
-  border-radius: 10px;
-  border: solid 1px white;
-}
-
-.contact form textarea {
-  height: 300px;
-  width: 96%;
-  resize: none;
-  padding: 10px;
-  border-radius: 10px;
-  border: solid 1px transparent;
-  font-size: 14px;
-}
-
-.contact form button {
-  width: 120px;
-  height: 50px;
-  border-radius: 50px;
-  border: solid 1px transparent;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.contact .status {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 40px;
-}
-
-.banner-container {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  overflow: hidden;
-  border: solid 1px black;
-  font-size: 40px;
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 900;
-  background-color: black;
-}
-
-.banner-text {
-  display: inline-block;
-  white-space: nowrap;
-  padding-left: 0%;
-  /*animation: slide 500s linear infinite;*/
-  background: -webkit-linear-gradient(to left, #999896, #ffffff);
-  background: linear-gradient(to left, #999896, #ffffff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#contact {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  overflow: hidden;
-  border: solid 1px white;
-  font-size: 40px;
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 900;
-  background-color: white;
-}
-
-#contact .banner-text {
-  display: inline-block;
-  white-space: nowrap;
-  padding-left: 0%;
-  /*animation: slide 500s linear infinite;*/
-  background: -webkit-linear-gradient(to left, black, #111010);
-  background: linear-gradient(to left, black, #111010);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.presentation-perso {
-  background-color: white;
-  padding-left: 50px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 30px;
-}
-
-.presentation-perso-image {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.presentation-perso-image img {
-  height: 300px;
-  width: 300px;
-  object-fit: cover;
-  border-radius: 200px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.presetation-perso-text {
-  display: flex;
-  flex-direction: column;
-  padding-right: 50px;
-}
-
-.presetation-perso-text h2 {
-  font-size: 40px;
-}
-
-.presentation-perso button {
-  width: 170px;
-  background-color: transparent;
-  color: black;
-  padding: 10px;
-  font-family: "Montserrat", serif;
-  font-size: 18px;
-  border-radius: 25px;
-  border: 1px solid black;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-}
+/* Collapse pou afficher contenu */
 
 .collapse {
   width: 100%;
@@ -673,86 +532,117 @@ footer p {
   padding: 20px;
 }
 
-.mes-competences {
-  background-color: white;
+/************************************************************************************/
+/******************************** Page Contact **************************************/
+
+.contact-page {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 80px;
-  padding-bottom: 30px;
-}
-
-.mes-competences h2 {
-  margin: 0;
-  font-size: 34px;
-}
-
-.mes-competences h3 {
-  font-size: 24px;
-  margin-top: 15px;
-}
-
-.competences {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
-}
-
-.competences div {
+  background: #000000;
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);
+  background: linear-gradient(to bottom, #434343, #000000);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
 }
 
-.frontend {
-  position: relative;
-  margin-top: 2rem;
+.contact {
   display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 10px;
 }
 
-.backend {
-  position: relative;
-  margin-top: 2rem;
+.contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.others {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.competences div h3 {
-  color: #8b8787;
-  position: absolute;
-  top: 1.2rem;
-  background: white;
-  padding: 0 0.5rem;
-  font-weight: bold;
-  z-index: 10;
-}
-
-.list-contener {
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  background: white;
-  width: 80%;
-  height: 100%;
-}
-
-.competences div ul {
-  margin: 0;
-  list-style: none;
+.contact form h2 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 38px;
   text-align: center;
-  padding: 0;
-  font-size: 20px;
 }
 
-.competences div ul li {
-  margin-top: 15px;
+.info-email {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-email input {
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: solid 1px white;
+}
+
+.contact form textarea {
+  height: 300px;
+  width: 96%;
+  resize: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px transparent;
+  font-size: 14px;
+}
+
+.contact form button {
+  width: 150px;
+  height: 60px;
+  border-radius: 50px;
+  border: solid 1px transparent;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #1e40af;
+  color: white;
+}
+
+.contact .status {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+/************************************************************************************/
+/********************* bannière text entre deux section *****************************/
+
+/* Page accueil */
+
+.banner-container {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px black;
+  font-size: 40px;
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 900;
+  background-color: black;
+}
+
+.banner-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 0%;
+  /*animation: slide 500s linear infinite;*/
+  background: -webkit-linear-gradient(to left, #999896, #ffffff);
+  background: linear-gradient(to left, #999896, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes slide {
@@ -764,7 +654,203 @@ footer p {
   }
 }
 
+/* Page contact */
+
+#contact {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px white;
+  font-size: 40px;
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 900;
+  background-color: white;
+}
+
+#contact .banner-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 0%;
+  /*animation: slide 500s linear infinite;*/
+  background: -webkit-linear-gradient(to left, black, #111010);
+  background: linear-gradient(to left, black, #111010);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/************************************************************************************/
+/********************** Section présentation personnel ******************************/
+
+.presentation-perso {
+  background-color: white;
+  padding-left: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+}
+
+.presentation-perso-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.presentation-perso-image img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 200px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.presetation-perso-text {
+  display: flex;
+  flex-direction: column;
+  padding-right: 50px;
+}
+
+.presetation-perso-text h2 {
+  font-size: 40px;
+}
+
+.cv-and-logo {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 33.2px;
+}
+
+.presentation-perso button {
+  cursor: pointer;
+  height: 50px;
+  width: 180px;
+  background-color: #1e40af;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  font-family: "Montserrat", serif;
+  font-size: 18px;
+  border-radius: 25px;
+  border: 1px solid #1e40af;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 20px;
+}
+
+.logo div {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 100px;
+}
+
+.logo img {
+  height: 60px;
+  width: 60px;
+}
+
+/************************************************************************************/
+/****************************** Section Compétences *********************************/
+
+.my-skills {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.my-skills h2 {
+  margin: 0;
+  font-size: 34px;
+  padding-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.my-skills h3 {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.skills {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.skills div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.skills-contener {
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.skills div h3 {
+  color: #8b8787;
+  position: absolute;
+  top: 1.2rem;
+  background: white;
+  padding: 0 0.5rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.skill-list-contener {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  width: 80%;
+  height: 100%;
+}
+
+.skills div ul {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  font-size: 20px;
+}
+
+.skills div ul li {
+  margin-top: 15px;
+}
+
+/******************************************************************************************************************************/
+/******************************************************************************************************************************/
+/*********************************** écrants de largeur comprise entre 1300px et 1026px ***************************************/
+
 @media (max-width: 1300px) {
+  /***************************************************************/
+  /*************************** Page projet ***********************/
   .projet .info-and-img {
     flex-direction: column;
     align-items: center;
@@ -819,7 +905,14 @@ footer p {
   }
 }
 
+/******************************************************************************************************************************/
+/******************************************************************************************************************************/
+/************************************ écrants de largeur comprise entre 1300px et 651px ***************************************/
+
 @media (max-width: 1025px) {
+  /***************************************************************/
+  /*************************** Générale **************************/
+
   body {
     min-width: 257px;
   }
@@ -827,6 +920,9 @@ footer p {
   p {
     font-size: 15px;
   }
+
+  /***************************************************************/
+  /*************************** Header ****************************/
 
   header {
     padding: 20px;
@@ -847,46 +943,22 @@ footer p {
     margin-left: 10px;
   }
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  footer div {
-    align-items: center;
-    padding: 15px;
-  }
-
-  footer div a {
-    font-size: 16px;
-    margin-bottom: 0px;
-  }
-
-  footer .ARR {
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: translateX(0%);
-  }
-
-  footer p {
-    font-size: 16px;
-  }
-
   .presentation {
+    margin-top: 20px;
     height: auto;
-    justify-content: space-between;
     padding-left: 20px;
     padding-bottom: 20px;
+    gap: 10px;
   }
 
   .presentation h1 {
-    margin-bottom: 70px;
-    margin-top: 40px;
+    margin: 0;
     font-size: 48px;
+  }
+
+  .presentation p {
+    margin-right: 20px;
+    font-size: 21px;
   }
 
   .presentation a {
@@ -905,6 +977,41 @@ footer p {
   .presentation .information div p {
     font-size: 14px;
   }
+
+  /***************************************************************/
+  /*************************** Footer ****************************/
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  footer div {
+    align-items: center;
+    padding: 15px;
+  }
+
+  footer div a {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+
+  footer .ARR {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translateX(0%);
+  }
+
+  footer p {
+    font-size: 20px;
+  }
+
+  /***************************************************************/
+  /*************************** Section Galerie *******************/
 
   .galerie {
     width: auto;
@@ -926,12 +1033,11 @@ footer p {
     aspect-ratio: 1;
   }
 
+  /***************************************************************/
+  /*************************** Page Projet ***********************/
+
   .projet {
     padding: 20px;
-  }
-
-  .projet .title-type .type {
-    margin-bottom: 10px;
   }
 
   .projet .title {
@@ -967,8 +1073,12 @@ footer p {
     box-sizing: border-box;
   }
 
+  .projet .info-and-img .presentationStrong {
+    font-size: 30px;
+  }
+
   .projet .info-and-img .presentation-txt {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .projet .info-and-img .info {
@@ -994,13 +1104,20 @@ footer p {
     justify-content: center;
     align-items: center;
     height: 33px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .projet a {
-    width: 120px;
-    padding: 8px 16px;
-    font-size: 12px;
+    width: 180px;
+    padding: 12px 20px;
+    background-color: #1e40af;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #1e40af;
   }
 
   .projet .picture {
@@ -1033,6 +1150,17 @@ footer p {
     font-size: 25px;
   }
 
+  .element h2 {
+    font-size: 15px;
+  }
+
+  .element p {
+    font-size: 12px;
+  }
+
+  /***************************************************************/
+  /*************************** Page Contact **********************/
+
   .contact {
     padding: 10px;
     width: 100%;
@@ -1054,6 +1182,9 @@ footer p {
     font-size: 30px;
   }
 
+  /***************************************************************/
+  /**************** Section présentation personnel ***************/
+
   .presentation-perso {
     padding-left: 20px;
     padding-top: 40px;
@@ -1074,56 +1205,76 @@ footer p {
     width: 250px;
   }
 
+  .cv-and-logo {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+  }
+
   .presentation-perso button {
-    width: 120px;
+    width: 130px;
     padding: 8px;
     font-size: 14px;
+    margin-top: 15px;
   }
 
-  .element h2 {
-    font-size: 15px;
+  .logo div {
+    height: 58px;
+    width: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 100px;
   }
 
-  .element p {
-    font-size: 12px;
+  .logo img {
+    height: 50px;
+    width: 50px;
   }
 
-  .mes-competences {
+  /***************************************************************/
+  /********************** Section Compétences ********************/
+
+  .my-skills {
     padding-top: 40px;
     padding-bottom: 15px;
   }
 
-  .competences {
+  .skills {
     display: flex;
     flex-direction: column;
   }
 
-  .competences div {
+  .skills div {
     padding: 25px;
   }
 
-  .frontend {
+  .skills-contener {
     margin-top: 1rem;
   }
 
-  .backend {
-    margin-top: 0rem;
-  }
-
-  .others {
-    margin-top: 0rem;
-  }
-
-  .competences div h3 {
+  .skills div h3 {
     top: -0.3rem;
   }
 
-  .competences div ul {
+  .skills div ul {
     font-size: 18px;
   }
 }
 
+/******************************************************************************************************************************/
+/******************************************************************************************************************************/
+/****************************************** écrants de largeur inférieur 650px ************************************************/
+
 @media (max-width: 650px) {
+  /***************************************************************/
+  /************************* Header ******************************/
+
+  /******************************************/
+  /*** Barre de navigation hamburger fermé **/
+
   header {
     display: flex;
     flex-direction: row;
@@ -1152,17 +1303,9 @@ footer p {
     padding: 20px;
   }
 
-  header nav.open {
-    display: flex;
-    align-items: end;
-  }
-
-  header p.open {
-    display: none;
-  }
-
   header nav a {
-    font-size: 16px;
+    font-size: 40px;
+    text-align: end;
   }
 
   .presentation h1 {
@@ -1170,6 +1313,92 @@ footer p {
     margin-right: 20px;
   }
 
+  .presentation p {
+    margin-top: 0;
+    margin-bottom: 44px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 0;
+  }
+
+  /******************************************/
+  /* Barre de navigation hamburger ouverte */
+
+  .content-with-background.open {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+    height: 100vh;
+  }
+
+  header.open {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 20px;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  .hamburger.open {
+    display: flex;
+    width: 100%;
+    align-items: end;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger.open span {
+    background-color: white;
+    height: 3px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    width: 20px;
+  }
+
+  header.open nav.open {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: transparent;
+    white-space: wrap;
+    border-top: none;
+    border-right: none;
+    padding: 20px 0;
+  }
+
+  header.open p.open {
+    display: none;
+  }
+
+  header.open nav.open a.open {
+    white-space: wrap;
+    font-size: 25px;
+    text-align: start;
+  }
+
+  /***************************************************************/
+  /************************* Footer ******************************/
+  footer div a {
+    font-size: 16px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  /***************************************************************/
+  /********************** Section Galerie ************************/
   .galerie {
     width: auto;
     height: auto;
@@ -1214,6 +1443,9 @@ footer p {
     display: none;
   }
 
+  /***************************************************************/
+  /************************* Page Projet *************************/
+
   .projet .title-type {
     display: flex;
     flex-direction: column;
@@ -1221,8 +1453,12 @@ footer p {
     gap: 0;
   }
 
-  .projet .title-type .type {
-    margin: 0;
+  .projet .info {
+    height: auto;
+  }
+
+  .projet .link {
+    height: auto;
   }
 
   .carousel {
@@ -1236,6 +1472,9 @@ footer p {
     max-width: 100%;
     min-width: 100%;
   }
+
+  /***************************************************************/
+  /************************* Page Contact ************************/
 
   .contact form h2 {
     font-size: 24px;

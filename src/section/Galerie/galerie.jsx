@@ -15,14 +15,15 @@ function Galerie() {
             state={{
               imagesGallery: project.gallery,
               title: project.title,
-              type: project.type,
               link: project.link,
               number: project.number,
               info: project.info,
+              presentation: project.presentationDetail,
               presentationText: project.presentation,
               descriptionText: project.description,
             }}
             className="grid-item"
+            tabIndex={index + 13}
           >
             <img
               src={project.cover}

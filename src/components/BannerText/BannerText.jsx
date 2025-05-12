@@ -1,3 +1,5 @@
+/* Bannière de séparation entre les différentes section avec text pouvant défiler */
+
 function BannerText({ message, id }) {
   return (
     <div className="banner-container" id={id}>

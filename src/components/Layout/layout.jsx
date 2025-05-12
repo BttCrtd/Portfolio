@@ -1,18 +1,25 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import PresentationPorfolio from "../../section/PresentationPortfolio/presentationPortfolio";
 import imgFond from "../../assets/imgFond.webp";
 import { useEffect, useState } from "react";
 
-function Layout({ children }) {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const isIndexPage = location.pathname === "/";
-  const isProjetPage = location.pathname === "/projet";
+/* Composant Layout pour l'en-tête et le pied de page */
 
+function Layout({ children }) {
+  /*Accée à la localisation actuelle dans l'application*/
+  const location = useLocation();
+  /*Navigation vers une route de l'application*/
+  const navigate = useNavigate();
+  /*Vérifie si on est sur la page d'accueil*/
+  const isIndexPage = location.pathname === "/";
+
+  /*Gestion des redirection vers les sections projet, compétences de la page d'accueil*/
   const [isRedirectToProjects, setIsRedirectToProjects] = useState(false);
   const [isRedirectToCompetences, setIsRedirectToCompetences] = useState(false);
+
+  /*Vérification de l'état ouvert/fermé du menu hamburger pour la version mobile*/
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  /*Fonction qui fait défiler jusqu'à la section projet */
   const scrollToProjects = () => {
     const element = document.getElementById("mesProjets");
     if (element) {
@@ -20,6 +27,7 @@ function Layout({ children }) {
     }
   };
 
+  /*Fonction qui fait défiler jusqu'à la section projet suivant si on se trouve sur la page d'accueil ou non de l'application*/
   const handleProjectClick = () => {
     setIsRedirectToProjects(true);
     setIsMenuOpen(false);
@@ -30,6 +38,7 @@ function Layout({ children }) {
     }
   };
 
+  /*Gestion du temps avant le défilement jusqu'à la section projet */
   useEffect(() => {
     if (isRedirectToProjects) {
       setIsRedirectToProjects(false);
@@ -39,6 +48,7 @@ function Layout({ children }) {
     }
   }, [isRedirectToProjects]);
 
+  /*Fonction qui fait défiler jusqu'à la section compétences */
   const scrollToCompetences = () => {
     const element = document.getElementById("mesCompetences");
     if (element) {
@@ -46,6 +56,7 @@ function Layout({ children }) {
     }
   };
 
+  /*Fonction qui fait défiler jusqu'à la section compétences suivant si on se trouve sur la page d'accueil ou non de l'application*/
   const handleCompetencesClick = () => {
     setIsRedirectToCompetences(true);
     setIsMenuOpen(false);
@@ -56,6 +67,7 @@ function Layout({ children }) {
     }
   };
 
+  /*Gestion du temps avant le défilement jusqu'à la section compétences */
   useEffect(() => {
     if (isRedirectToCompetences) {
       setIsRedirectToCompetences(false);
@@ -68,13 +80,15 @@ function Layout({ children }) {
   return (
     <div>
       <div
-        className="content-with-background"
+        className={`content-with-background ${isMenuOpen ? "open" : ""}`}
         style={{
           backgroundImage: `url(${imgFond})`,
         }}
       >
-        <header>
-          <p className={isMenuOpen ? "open" : ""}>Courtadon Baptiste</p>
+        <header className={`${isMenuOpen ? "open" : ""}`}>
+          <p className={isMenuOpen ? "open" : ""} tabIndex="1">
+            Courtadon Baptiste
+          </p>
 
           <div
             className={`hamburger ${isMenuOpen ? "open" : ""}`}
@@ -86,18 +100,42 @@ function Layout({ children }) {
           </div>
 
           <nav className={isMenuOpen ? "open" : ""}>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              to="/"
+              className={isMenuOpen ? "open" : ""}
+              onClick={() => setIsMenuOpen(false)}
+              tabIndex="3"
+            >
               Accueil
             </Link>
-            <a onClick={handleCompetencesClick}>Mes Compétences</a>
-            <a onClick={handleProjectClick}>Mes Projets</a>
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+            <a
+              className={isMenuOpen ? "open" : ""}
+              onClick={handleCompetencesClick}
+              tabIndex="4"
+            >
+              Mes Compétences
+            </a>
+            <a
+              className={isMenuOpen ? "open" : ""}
+              onClick={handleProjectClick}
+              tabIndex="5"
+            >
+              Mes Projets
+            </a>
+            <Link
+              className={isMenuOpen ? "open" : ""}
+              to="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              tabIndex="6"
+            >
               Contact
             </Link>
           </nav>
         </header>
-
-        {!isProjetPage && <PresentationPorfolio />}
+        <div className="presentation">
+          <h1 tabIndex="2">Développeur Web</h1>
+          <p>Vos idées méritent d'exister. Réalisons-les ensemble !</p>
+        </div>
       </div>
 
       <main>{children}</main>
@@ -105,7 +143,9 @@ function Layout({ children }) {
       <footer>
         <div>
           <p>Contact :</p>
-          <Link to="/contact">courtadon.baptiste@gmail.com</Link>
+          <Link to="/contact" tabIndex="19">
+            courtadon.baptiste@gmail.com
+          </Link>
         </div>
         <div>
           <p>Localisation :</p>
