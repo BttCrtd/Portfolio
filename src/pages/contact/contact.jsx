@@ -6,6 +6,7 @@ function Contact() {
   /*Etat des champs du formulaire à envoyer*/
   const [formData, setFormData] = useState({
     email: "",
+    name: "",
     subject: "",
     message: "",
   });
@@ -37,6 +38,7 @@ function Contact() {
           /*Réinitialisation du formulaire */
           setFormData({
             email: "",
+            name: "",
             subject: "",
             message: "",
           });

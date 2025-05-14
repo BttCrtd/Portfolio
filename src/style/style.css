@@ -45,6 +45,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 68px;
+  animation: moveInRight 2s ease-out;
 }
 
 header p {
@@ -81,6 +82,7 @@ header nav a:hover {
   padding-left: 50px;
   padding-bottom: 50px;
   gap: 10px;
+  animation: moveInLeft 2s ease-out;
 }
 
 .presentation p {
@@ -115,6 +117,30 @@ header nav a:hover {
 .presentation .information div p {
   margin: 0;
   font-size: 20px;
+}
+
+/*Annimation d'affichage par la droite */
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/*Annimation d'affichage par la gauche */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 /********** Nav hamburger **********/
@@ -387,6 +413,11 @@ footer p {
   border: 2px solid #1e40af;
 }
 
+.projet a:hover {
+  background-color: #3960e2;
+  border: 2px solid #3960e2;
+}
+
 .projet .picture {
   min-width: 715px;
   display: flex;
@@ -609,6 +640,10 @@ footer p {
   color: white;
 }
 
+.contact form button:hover {
+  background-color: #3960e2;
+}
+
 .contact .status {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -741,6 +776,11 @@ footer p {
   border-radius: 25px;
   border: 1px solid #1e40af;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.presentation-perso button:hover {
+  background-color: #3960e2;
+  border: 1px solid #3960e2;
 }
 
 .logo {
