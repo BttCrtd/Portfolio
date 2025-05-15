@@ -17,18 +17,16 @@ function Projet() {
 
   /*Structure de la page Projet */
   return (
-    <section className="projet">
+    <section className="project">
       <div className="title">
-        <div className="title-type">
-          <h1 tabIndex="6">{title}</h1>
-        </div>
+        <h1 tabIndex="6">{title}</h1>
         <div className="square">{number}</div>
       </div>
       <div className="info">
         <div className="info-project">
           {info &&
             info.map((tech, index) => (
-              <div key={index} className="info-bubble" tabIndex={index + 7}>
+              <div key={index} className="info-tags" tabIndex={index + 7}>
                 {tech}
               </div>
             ))}
@@ -40,15 +38,15 @@ function Projet() {
         </div>
       </div>
       <div className="info-and-img">
-        <div className="projet-présentation">
-          <p className="presentationStrong" tabIndex="15">
+        <div>
+          <p className="main-presentation" tabIndex="15">
             {presentation}
           </p>
-          <p className="presentation-txt">{presentationText}</p>
+          <p className="objectives-presentation">{presentationText}</p>
         </div>
         <SlideShow pictures={imagesGallery} title={title} />
       </div>
-      <div className="collapse">
+      <div className="realizations-presentation">
         <p>{descriptionText}</p>
       </div>
     </section>

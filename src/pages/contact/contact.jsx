@@ -59,8 +59,10 @@ function Contact() {
               Contactez-moi pour donner vie à vos idées !
             </h2>
             <div className="info-email">
+              <label htmlFor="name">Nom</label>
               <input
-                type="name"
+                id="name"
+                type="text"
                 name="name"
                 placeholder="Nom"
                 value={formData.name}
@@ -68,7 +70,9 @@ function Contact() {
                 required
                 tabIndex="8"
               />
+              <label htmlFor="email">Email</label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -77,7 +81,9 @@ function Contact() {
                 required
                 tabIndex="9"
               />
+              <label htmlFor="subject">Objet</label>
               <input
+                id="subject"
                 type="text"
                 name="subject"
                 placeholder="Objet"
@@ -87,7 +93,9 @@ function Contact() {
                 tabIndex="10"
               />
             </div>
+            <label htmlFor="message">Message</label>
             <textarea
+              id="message"
               name="message"
               placeholder="Votre message"
               rows={4}

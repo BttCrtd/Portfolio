@@ -33,12 +33,12 @@ function Galerie() {
           </Link>
         ))}
         {isOdd && (
-          <Link to="/contact" className="grid-item-plus">
+          <Link to="/contact" className="grid-item-contact">
             <img
               src={photoPlus}
               alt="Et si votre projet devenait notre projet ?"
             />
-            <div className="filter-plus">
+            <div className="contact-filter">
               <p>Et si ...</p>
             </div>
           </Link>

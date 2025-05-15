@@ -91,12 +91,21 @@ function Layout({ children }) {
           </p>
 
           <div
-            className={`hamburger ${isMenuOpen ? "open" : ""}`}
+            tabIndex="3"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`hamburger ${isMenuOpen ? "open" : ""}`}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            {isMenuOpen ? (
+              <>
+                <p>X</p>
+              </>
+            ) : (
+              <>
+                <span></span>
+                <span></span>
+                <span></span>
+              </>
+            )}
           </div>
 
           <nav className={isMenuOpen ? "open" : ""}>

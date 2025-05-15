@@ -40,7 +40,7 @@ function SlideShow({ pictures, title }) {
         />
         {pictures.length !== 1 ? (
           <>
-            <div className="button">
+            <div className="button-container">
               <button onClick={prevPicture} tabIndex="17">
                 <FontAwesomeIcon icon={faChevronLeft} />
               </button>
@@ -52,7 +52,7 @@ function SlideShow({ pictures, title }) {
         ) : null}
       </div>
       {/*Bulles pour indiquer l'image visualisée sur le nombre totale d'images */}
-      <div className="pictureBubbles">
+      <div className="picture-numbering">
         {pictures.map((_, index) => (
           <span
             key={index}
