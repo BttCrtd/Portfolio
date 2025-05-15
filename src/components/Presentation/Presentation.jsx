@@ -41,8 +41,9 @@ function Presentation() {
           la manipulation de données et la conception d’algorithmes.
         </p>
         <p>
-          Toujours motivé à apprendre et progresser, je suis actuellement à la
-          recherche d’une alternance.<br></br>
+          Toujours motivé à apprendre et progresser,{" "}
+          <strong>je suis actuellement à la recherche d’une alternance</strong>.
+          <br></br>
           Je suis ouvert aux collaborations et aux opportunités qui me
           permettront d’évoluer dans le domaine du développement web.
         </p>
